@@ -92,11 +92,15 @@
 # print(max(list, key=len))
 
 
-num_pad=((1 ,2 ,3 ),
-         (4 ,5 ,6),
-         (7 ,8 ,9),
-         ("*",0,"#"))
-for row in num_pad:
-    for item in row:
-        print(item , end=" ")
-    print()
+# num_pad=((1 ,2 ,3 ),
+#          (4 ,5 ,6),
+#          (7 ,8 ,9),
+#          ("*",0,"#"))
+# for row in num_pad:
+#     for item in row:
+#         print(item , end=" ")
+#     print()
+
+
+# food={"pizza":100,"burger":90,"cake":120,"soup":80}
+# print(food.get("dog"))

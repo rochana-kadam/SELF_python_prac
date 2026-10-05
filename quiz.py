@@ -24,10 +24,10 @@ for question in questions:
     guess=input("enter (A,B,C,D): ").upper()
     guesses.append(guess)
     if guess== answers[question_num]:
-        print("correct! ")
+        print("✅correct! ")
         score+=1
     else:
-         print("incorrect! ")
+         print("❌ incorrect! ")
          print(f"{answers[question_num]} is the correct answer ")
     question_num+=1    
 
