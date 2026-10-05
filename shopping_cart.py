@@ -20,8 +20,8 @@ for item, price in zip(items, prices):
 # *Burger → 8
 # *Pasta  → 12
 
-    print(f"{item:<13} ${price}")
-    
+    print(f"{item:13} ${price}")
+# * add's padding and if u add 0 before 13 it will fill it with zero's
 # *left justify
 # *right justify-  :>13
 # *center align-  :^13
