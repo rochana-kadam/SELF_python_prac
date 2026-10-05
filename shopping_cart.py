@@ -1,0 +1,27 @@
+items=[]
+prices=[]
+total=0
+
+while True:
+    item=input("enter a items to purchase (q to quit ): ")
+    if item.lower()=='q':
+        break
+    else:
+        items.append(item)
+        price=float(input(f"enter price for {item}: $ "))
+        prices.append(price)
+        total+=price
+
+print("-------Your Cart-------")
+print("Items          Price")
+for item, price in zip(items, prices):
+    print(f"{item:<13} ${price}")
+# left justify
+# right justify-  :>13
+# center align-  :^13
+
+print(f"Your total is ${total:.2f}")
+
+
+# print(f"Your total is ${total:010}") 
+# it will give a padding of zero's before the text
