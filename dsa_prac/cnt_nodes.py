@@ -18,7 +18,7 @@ class LinkedList:
                 temp=temp.next
             temp.next=new_node
             # cnt+=1
-    def print(self):
+    def cnt(self):
         temp=self.head
         cnt=0
         while temp:
@@ -34,4 +34,4 @@ list.append(Node(2))
 list.append(Node(3))
 list.append(Node(4))
 
-list.print()
+list.cnt()
