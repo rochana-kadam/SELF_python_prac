@@ -104,3 +104,8 @@
 
 # food={"pizza":100,"burger":90,"cake":120,"soup":80}
 # print(food.get("dog"))
+
+
+# digits = [9]
+# digits[-1]=digits[-1]+1
+# print(digits)
