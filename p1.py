@@ -109,3 +109,18 @@
 # digits = [9]
 # digits[-1]=digits[-1]+1
 # print(digits)
+
+# list1 = [1,2,4]
+# list2 = [1,3,4]
+# for i in list1:
+#     for j in list2:
+#         print(j, end=" ")
+
+n=6
+sum=0
+for i in range(1,n+1):
+    if n%i==0:
+        sum+=i
+
+print (sum)
+
