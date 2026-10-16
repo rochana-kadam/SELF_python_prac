@@ -1,3 +1,5 @@
+
+# highest occurring element in an array
 nums=[4,4,5,5,6,7]
 freq={}
 for no in nums:
