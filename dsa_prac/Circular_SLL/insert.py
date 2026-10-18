@@ -59,5 +59,5 @@ list.append(Node(50))
 
 list.print()
 
-list.insert(Node(25),6)
+list.insert(Node(25),1)
 list.print()
