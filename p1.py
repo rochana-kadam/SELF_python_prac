@@ -116,11 +116,24 @@
 #     for j in list2:
 #         print(j, end=" ")
 
-n=6
-sum=0
-for i in range(1,n+1):
-    if n%i==0:
-        sum+=i
+# n=6
+# sum=0
+# for i in range(1,n+1):
+#     if n%i==0:
+#         sum+=i
 
-print (sum)
+# print (sum)
 
+arr=[4,4,5,5,6]
+freq={}
+for i in arr:
+    if i in freq:
+        freq[i]+=1
+    else:
+        freq[i]=1
+
+sorted=sorted(freq,key=freq.get, reverse=True)
+print(sorted)
+
+# print(max(freq.get))
+# print(min(freq.get))
