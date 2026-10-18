@@ -31,6 +31,23 @@
 
 # * second highest occuring element
 
+# nums=[1,1,2,3,3,3]
+# freq={}
+# for i in nums:
+#     if i in freq:
+#         freq[i]+=1
+#     else:
+#         freq[i]=1
+
+# unique_freq=sorted(set(freq.values()),reverse=True)
+# second_highest=unique_freq[1]
+
+# for key, value in freq.items():
+#     if value==second_highest:
+#         print(key)
+
+# * sum of highest and lowest frequencies
+
 nums=[1,1,2,3,3,3]
 freq={}
 for i in nums:
@@ -39,9 +56,6 @@ for i in nums:
     else:
         freq[i]=1
 
-unique_freq=sorted(set(freq.values()),reverse=True)
-second_highest=unique_freq[1]
-
-for key, value in freq.items():
-    if value==second_highest:
-        print(key)
+highest=max(freq.values())
+lowest=min(freq.values())
+print(highest+lowest)
