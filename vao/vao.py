@@ -48,14 +48,27 @@
 
 # * sum of highest and lowest frequencies
 
-nums=[1,1,2,3,3,3]
-freq={}
-for i in nums:
-    if i in freq:
-        freq[i]+=1
-    else:
-        freq[i]=1
+# nums=[1,1,2,3,3,3]
+# freq={}
+# for i in nums:
+#     if i in freq:
+#         freq[i]+=1
+#     else:
+#         freq[i]=1
 
-highest=max(freq.values())
-lowest=min(freq.values())
-print(highest+lowest)
+# highest=max(freq.values())
+# lowest=min(freq.values())
+# print(highest+lowest)
+
+# * largest odd number in the string
+
+s = "1002"
+
+if not s:
+    print("")
+else:
+    for i in range(len(s) - 1, -1, -1):
+        if int(s[i]) % 2 != 0:
+            print(s[:i + 1])
+            break
+
