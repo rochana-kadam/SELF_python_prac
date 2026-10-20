@@ -62,13 +62,34 @@
 
 # * largest odd number in the string
 
-s = "1002"
+# s = "1002"
 
-if not s:
-    print("")
+# if not s:
+#     print("")
+# else:
+#     for i in range(len(s) - 1, -1, -1):
+#         if int(s[i]) % 2 != 0:
+#             print(s[:i + 1])
+#             break
+
+# * isomorphic strings
+
+s = "apple"
+t = "bbnbm"
+
+map_st = {}
+map_ts = {}
+
+for a, b in zip(s, t):
+    if a in map_st and map_st[a] != b:
+        print(False)
+        break
+
+    if b in map_ts and map_ts[b] != a:
+        print(False)
+        break
+
+    map_st[a] = b
+    map_ts[b] = a
 else:
-    for i in range(len(s) - 1, -1, -1):
-        if int(s[i]) % 2 != 0:
-            print(s[:i + 1])
-            break
-
+    print(True)
