@@ -48,7 +48,7 @@ class LinkedList:
 
 
 my_stack=LinkedList()
-# stack2=LinkedList()
+stack2=LinkedList()
 # my_stack.push(Node(10))
 # my_stack.push(Node(20))
 # my_stack.push(Node(30))
