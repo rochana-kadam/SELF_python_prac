@@ -2,7 +2,7 @@
 # 1. Push
 # 2. Pop
 # 3. Display
-
+# 4. Reverse String using Stack
 # 5. Reverse Stack using another Stack
 
 class Node:

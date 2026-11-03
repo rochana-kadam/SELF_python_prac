@@ -101,6 +101,8 @@ queue.enqueue(Node(7))
 queue.enqueue(Node(4))
 queue.print()
 
+# queue.dequeue()
+
 # print("reversing stack \n")
 # queue.reverse()
 
