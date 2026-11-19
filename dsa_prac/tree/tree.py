@@ -25,6 +25,25 @@ def inorder(root):
         inorder(root.right)
 
 
+def preorder(root):
+    if root:
+        print(root.data, end=" ")
+        preorder(root.left)
+        preorder(root.right)
+
+
+def postorder(root):
+    if root:
+        postorder(root.left)
+        postorder(root.right)
+        print(root.data, end=" ")
+
 # Display the tree
 print("Inorder Traversal:")
 inorder(root)
+
+print("preorder Traversal:")
+preorder(root)
+
+print("postorder Traversal:")
+postorder(root)
