@@ -124,16 +124,27 @@
 
 # print (sum)
 
-arr=[4,4,5,5,6]
-freq={}
-for i in arr:
-    if i in freq:
-        freq[i]+=1
-    else:
-        freq[i]=1
+# arr=[4,4,5,5,6]
+# freq={}
+# for i in arr:
+#     if i in freq:
+#         freq[i]+=1
+#     else:
+#         freq[i]=1
 
-sorted=sorted(freq,key=freq.get, reverse=True)
-print(sorted)
+# sorted=sorted(freq,key=freq.get, reverse=True)
+# print(sorted)
 
 # print(max(freq.get))
 # print(min(freq.get))
+
+password = input("Enter password: ")
+
+try:
+    if len(password) < 8 or password.isalpha() or password.isdigit():
+        raise ValueError("Invalid password")
+    else:
+        print("Valid password")
+
+except ValueError as e:
+    print(e)

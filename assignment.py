@@ -1,0 +1,16 @@
+#* Q1. Function Scope and Built-in Functions (2 Marks)
+#* Write a function analyze_numbers() that accepts a list of numbers and displays
+#* 1.Maximum value
+#* 2.Minimum value
+#* 3.Sum of all values
+#* 4.Average value
+
+def analyze_numbers(numbers):
+    return max(numbers), min(numbers), sum(numbers), sum(numbers)/len(numbers)
+
+no=[10, 20, 30, 40]
+Maximum_value,Minimum_value, Sum_values, Average_value = analyze_numbers(no)
+print(f"Maximum value: {Maximum_value}")
+print(f"Minimum value: {Minimum_value}")
+print(f"Sum of all values: {Sum_values}")
+print(f"Average value: {Average_value}")
