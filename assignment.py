@@ -32,3 +32,20 @@ import random, math
 number=random.randint(1,100)
 print(number)
 print(math.sqrt(number))
+
+#* Q4. Employee Salary Calculator using Function Arguments (4 Marks)
+#* Create a function:
+#* calculate_salary(basic_salary, bonus=2000)
+#* The function should calculate and display:
+#* Total Salary = Basic Salary + Bonus
+#* Demonstrate the use of:
+#* • Positional Arguments
+#* • Keyword Arguments
+#* • Default Arguments
+
+def calculate_salary(basic_salary, bonus=2000):
+    return basic_salary + bonus
+
+print("Employee 1 Salary: ",calculate_salary(52000,3000))
+print(" Employee 3 Salary: ",calculate_salary(basic_salary=52000,bonus=3000))
+print(" Employee 2 Salary: ",calculate_salary(52000))
