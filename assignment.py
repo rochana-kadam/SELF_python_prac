@@ -14,3 +14,11 @@ print(f"Maximum value: {Maximum_value}")
 print(f"Minimum value: {Minimum_value}")
 print(f"Sum of all values: {Sum_values}")
 print(f"Average value: {Average_value}")
+
+#* Q2. Lambda Function (2 Marks)
+#* Create a lambda function to calculate the square of a number.
+#* Accept a number from the user and display its square.
+
+number=int(input("enter number: "))
+square=lambda number: number**2
+print(square(number))
