@@ -49,3 +49,21 @@ def calculate_salary(basic_salary, bonus=2000):
 print("Employee 1 Salary: ",calculate_salary(52000,3000))
 print(" Employee 3 Salary: ",calculate_salary(basic_salary=52000,bonus=3000))
 print(" Employee 2 Salary: ",calculate_salary(52000))
+
+#* Q5. Map, Filter and Reduce (4 Marks)
+#* Given:
+#* numbers = [1,2,3,4,5,6,7,8,9,10]
+#* Perform the following operations:
+#* 1. Use map() to generate squares of all numbers.
+#* 2. Use filter() to extract even numbers.
+#* 3. Use reduce() to calculate the sum of all numbers.
+#* Display all results.
+
+from functools import reduce
+numbers = [1,2,3,4,5,6,7,8,9,10]
+result=list(map(lambda x: x**2,numbers))
+print("Squares: ",result)
+result2=list(filter(lambda x: x%2==0 ,numbers))
+print("Even Numbers: ",result2)
+result3=reduce(lambda a,b: a+b ,numbers)
+print("Sum: ",result3)
