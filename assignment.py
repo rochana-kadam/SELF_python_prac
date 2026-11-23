@@ -67,3 +67,24 @@ result2=list(filter(lambda x: x%2==0 ,numbers))
 print("Even Numbers: ",result2)
 result3=reduce(lambda a,b: a+b ,numbers)
 print("Sum: ",result3)
+
+#* Q6. Decorator Implementation (3 Marks)
+#* Create a decorator named execution_time() that:
+#* Displays a message before function execution.
+#* Executes the function.
+#* Displays a message after function execution.
+#* Apply this decorator to a function that calculates the factorial of a number.
+def execution_time(func):
+    def wrapper(no):
+        print("function started")
+        result=func(no)
+        print("function ended")
+        return result
+    return wrapper
+@execution_time
+def factorial(no):
+    fact=1
+    for i in range (1,no+1):
+        fact=fact*i
+    return fact
+factorial(5)
