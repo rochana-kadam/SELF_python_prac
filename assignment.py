@@ -22,3 +22,13 @@ print(f"Average value: {Average_value}")
 number=int(input("enter number: "))
 square=lambda number: number**2
 print(square(number))
+
+#* Q3. Math and Random Module (2 Marks)
+#* Write a program that:
+#* •Generates a random number between 1 and 100.
+#* •Finds its square root using the math module.
+
+import random, math
+number=random.randint(1,100)
+print(number)
+print(math.sqrt(number))
