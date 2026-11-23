@@ -88,3 +88,17 @@ def factorial(no):
         fact=fact*i
     return fact
 factorial(5)
+
+
+#* Q7. Generator and Datetime Module (3 Marks)
+#* Create a generator function that generates dates for the next 7 days starting
+#* today's date.
+#* Use the datetime module.
+from datetime import datetime, timedelta
+def display_date():
+    today=datetime.today()
+    print(today)
+    for i in range(7):
+        yield today+timedelta(days=i)
+for date in display_date():
+    print(date.strftime("%d-%m-%d"))
