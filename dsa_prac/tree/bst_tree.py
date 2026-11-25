@@ -26,6 +26,48 @@ class BST:
                         return
                     else:
                         temp=temp.right
+
+
+    def delete_node(self, rt,val):
+        if rt is None:
+            return
+        if val<rt.data:
+            rt.left=self.delete_node(rt.left, val)
+
+        elif val>rt.data:
+            rt.right=self.delete_node(rt.right, val)
+
+        else:
+            if rt.left is None:   #node with right child only
+                return rt.right
+            if rt.right is None:  #node with left child only
+                return rt.left
+
+            # node has both left and right children 
+            succ=self.get_successor(rt)
+            rt.data=succ.data
+            rt.right=self.delete_node(rt.right, succ.data)
+        return rt
+
+    def get_successor(self,temp):
+        temp=temp.right
+        while temp.left is not None:
+            temp=temp.left
+        return temp
+    
+
+    def search(self,key):
+        temp=self.root
+        while temp:
+            if temp.data==key:
+                return True
+            elif key<temp.data:
+                temp=temp.left
+            else:
+                temp=temp.right
+
+        return False
+    
     def inorder(self, rt):
         if rt is None:
             return
@@ -46,7 +88,8 @@ class BST:
         else:
             self.postorder(rt.left)
             self.postorder(rt.right)
-            print(rt.data, end=" ")
+            print(rt.data, end=" ") 
+            
     def findminmax(self):
         temp=self.root
         while temp.left:
@@ -68,9 +111,18 @@ b1.insert(Node(65))
 b1.insert(Node(300))
 print("\nInorder: ")
 b1.inorder(b1.root)
-print("\nNo of nodes: ",b1.cnt)
-print("\nPreorder: ")
-b1.preorder(b1.root)
-print("\nPostorder: ")
-b1.postorder(b1.root)
-b1.findminmax()
+#print("\nNo of nodes: ",b1.cnt)
+# print("\nPreorder: ")
+# b1.preorder(b1.root)
+# print("\nPostorder: ")
+# b1.postorder(b1.root)
+# b1.findminmax()
+
+# b1.delete_node(b1.root,300)
+# print("after deletion: ", end=" ")
+# b1.inorder(b1.root)
+
+if b1.search(80):
+    print("\n found the node")
+else:
+    print("\n not found the node")
